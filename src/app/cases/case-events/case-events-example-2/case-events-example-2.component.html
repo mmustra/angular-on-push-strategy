@@ -1,0 +1,22 @@
+<h2>Main vs Side path</h2>
+
+<p>
+  Every input is initialized with message using
+  <code>setTimeout()</code>, which doesn't render the message due to OnPush
+  strategy. Click and observe change detector being triggered on main vs side
+  path.
+</p>
+
+<p>Reload example couple of times and try different scenarios.</p>
+
+<ol class="badge-list">
+  <li>Triggers main path: Root → Node-1 → Node-1-1</li>
+  <li>
+    Triggers main path: Root → Node-2 → Node-2-2
+    <ul>
+      <li>Node-2-1 change detector will never trigger</li>
+    </ul>
+  </li>
+</ol>
+
+<mm-card-container [config]="config"></mm-card-container>

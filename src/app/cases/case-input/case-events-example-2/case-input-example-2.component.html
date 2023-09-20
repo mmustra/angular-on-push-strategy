@@ -1,0 +1,27 @@
+<h2>Service communication and @Input</h2>
+
+<p>
+  All messages from senders are emitted to parent Node via service, which then
+  passes it via @Input to child node. Some receivers have their messages
+  initialized with <code>setTimeout()</code>.
+</p>
+
+<p>
+  Service communication via observables don't trigger change detector. Only the
+  part where Node is passing message by changing @Input reference does.
+</p>
+
+<p>Reload example couple of times and try different scenarios.</p>
+
+<ol class="badge-list">
+  <li>
+    Emits message via service to Node-2-2, which passes it via @Input to
+    Node-2-2-1
+  </li>
+  <li>
+    Emits message via service to Node-2-1, which passes it via @Input to
+    Node-2-1-1
+  </li>
+</ol>
+
+<mm-card-container [config]="config"></mm-card-container>

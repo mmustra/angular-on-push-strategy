@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Events with OnPush</h1>
+
+  <p>
+    Change detection will be triggered by event like click. Flow will go form
+    root to clicked component and will trigger change detector for each
+    component on main path. When change detector is triggered it will compare
+    diff and render if needed.
+  </p>
+
+  <p>
+    Note that DoCheck hook will be called for each component on main path and
+    current level siblings/children - side paths.
+  </p>
+
+  <mm-example-container [routes]="routes"
+    ><router-outlet></router-outlet
+  ></mm-example-container>
+</div>

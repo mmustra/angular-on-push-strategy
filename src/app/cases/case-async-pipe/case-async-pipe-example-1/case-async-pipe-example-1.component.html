@@ -1,0 +1,15 @@
+<h2>Async event with AsyncPipe</h2>
+
+<p>
+  All inputs have their messages initialized with
+  <code>setTimeout()</code> which will on execution emit message via observable
+  bound on template with AsyncPipe.
+</p>
+
+<ol class="badge-list">
+  <li>Sets own message via observable after 2 seconds</li>
+  <li>Sets own message via observable after 4 seconds</li>
+  <li>Sets own message via observable after 6 seconds</li>
+</ol>
+
+<mm-card-container [config]="config"></mm-card-container>

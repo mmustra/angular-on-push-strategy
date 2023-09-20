@@ -1,0 +1,14 @@
+<p-toolbar *teleportTo="'outsideOutlet'">
+  <div class="p-toolbar-group-start flex flex-wrap gap-8">
+    <mm-reload
+      [container$]="container$"
+      [createFunc]="createComponent"
+      [destroyFunc]="destroyComponent"
+    ></mm-reload>
+    <mm-animation-speed></mm-animation-speed>
+  </div>
+</p-toolbar>
+
+<div class="flex">
+  <ng-template #container></ng-template>
+</div>

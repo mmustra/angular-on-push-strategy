@@ -1,0 +1,21 @@
+<div class="flex flex-col">
+  <div>Animation</div>
+
+  <div class="flex gap-2">
+    <p-toggleButton
+      [(ngModel)]="isAnimationVisible"
+      (onChange)="changeVisibility($event)"
+      onIcon="pi pi-eye"
+      offIcon="pi pi-eye-slash"
+    ></p-toggleButton>
+
+    <p-selectButton
+      [options]="animationOptions"
+      [(ngModel)]="selectedAnimationOption"
+      (onChange)="changeSpeed($event)"
+      optionLabel="name"
+      optionValue="value"
+      [disabled]="!isAnimationVisible"
+    ></p-selectButton>
+  </div>
+</div>

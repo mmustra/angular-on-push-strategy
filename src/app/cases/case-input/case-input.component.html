@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>@Input() with OnPush</h1>
+
+  <p>
+    Change detection will be triggered by <code>@Input()</code> reference
+    change. Flow will go form root to target component and will trigger change
+    detector for each component on main path.
+  </p>
+
+  <mm-example-container [routes]="routes">
+    <router-outlet></router-outlet>
+  </mm-example-container>
+</div>

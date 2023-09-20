@@ -1,0 +1,13 @@
+/* NOTICE FireFox height fix when in <li> */
+:host {
+  display: block;
+}
+
+a {
+  color: revert;
+  text-decoration: revert;
+}
+
+.author {
+  font-weight: 600;
+}

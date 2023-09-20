@@ -1,0 +1,16 @@
+<p-fieldset>
+  <ng-template pTemplate="header">
+    <div class="flex gap-2">
+      <p-button
+        *ngFor="let routeButton of routeButtons; index as i"
+        (onClick)="changeRoute(i)"
+        [label]="routeButton.name"
+        [styleClass]="
+          'p-button-outlined p-button-secondary' + withActiveClass(i)
+        "
+      ></p-button>
+    </div>
+  </ng-template>
+
+  <ng-content></ng-content>
+</p-fieldset>

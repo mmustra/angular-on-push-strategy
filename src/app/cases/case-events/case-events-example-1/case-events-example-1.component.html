@@ -1,0 +1,14 @@
+<h2>Parent to child flow</h2>
+
+<p>
+  Click and observe DoCheck flow. Note that change detector is only on main
+  path.
+</p>
+
+<ol class="badge-list">
+  <li>3 DoChecks, 1 change detector check</li>
+  <li>5 DoChecks, 3 change detector checks</li>
+  <li>5 DoChecks, 2 change detector checks</li>
+</ol>
+
+<mm-card-container [config]="config"></mm-card-container>

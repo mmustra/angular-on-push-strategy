@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+/* PrimeNG overrides */
+
+*:focus {
+  box-shadow: none !important;
+}
+
+p-button button,
+.p-button {
+  font-size: 12px !important;
+  padding: 0.25rem 0.5rem !important;
+  background: #3b82f6;
+  transition: none !important;
+}
+
+p-button .p-button-icon-only {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+p-button .p-button-icon-only span {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+p-togglebutton .p-togglebutton {
+  width: 2.5rem !important;
+}
+
+p-toolbar .p-toolbar {
+  border: none !important;
+  padding: 12px 20px 20px 20px;
+}
+
+p-fieldset fieldset {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+p-fieldset fieldset .p-fieldset-content {
+  padding: 1rem 0 1rem 0 !important;
+}
+
+p-fieldset fieldset legend {
+  border: none !important;
+  background: none !important;
+  padding: 0px 8px !important;
+}
+
+/* Custom */
+
+body {
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1rem;
+  padding-bottom: 0.15rem;
+  font-weight: 500;
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
+ol.badge-list {
+  list-style: upper-alpha;
+  padding-left: 1.5rem;
+}
+
+ol.badge-list ::marker {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+ol.badge-list ul {
+  list-style: circle;
+  padding-left: 1.5rem;
+}
+
+ul.reference-list {
+  list-style: circle;
+  padding-left: 1.5rem;
+}
+
+code {
+  background-color: #f2f2f2;
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.container {
+  max-width: 650px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 15px;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  color: azure;
+  background-color: forestgreen;
+  font-family: "Lucida Console";
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px 4px 10px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.card button:active {
+  background-color: rgb(45, 175, 45);
+  box-shadow: 0px 0px 5px 0px rgba(142, 216, 23, 0.75);
+  transform: scale(0.95);
+}
+
+.card button[disabled] {
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: none;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.card input {
+  width: 100%;
+  margin-top: 3px;
+  padding: 0 8px;
+  outline: none;
+  border-radius: 3px;
+}
+
+.card input[disabled] {
+  background-color: rgba(0, 0, 0, 0.15);
+  cursor: not-allowed;
+}

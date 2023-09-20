@@ -1,0 +1,21 @@
+<h2>Service with AsyncPipe</h2>
+
+<p>
+  Only Node-2 has it's initial data set with <code>setTimeout()</code>. Click
+  will send message via service, and target listener will push that message via
+  observable bound on template via AsyncPipe.
+</p>
+
+<p>Reload example couple of times and try different scenarios.</p>
+
+<ol class="badge-list">
+  <li>
+    Emits message via service to Node-2-1, AsyncPipe triggers change detector
+  </li>
+
+  <li>
+    Emits message via service to Node-2-2, AsyncPipe triggers change detector<br />
+  </li>
+</ol>
+
+<mm-card-container [config]="config"></mm-card-container>

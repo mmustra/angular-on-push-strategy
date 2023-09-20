@@ -1,0 +1,44 @@
+<div
+  class="card w-48 min-w-min relative"
+  pBadge
+  [badgeDisabled]="!config.badge"
+  [value]="config.badge"
+>
+  <h2 class="font-semibold">{{ config.name }}</h2>
+
+  <div class="flex flex-col gap-1">
+    <div class="flex-none">
+      <button
+        [disabled]="!config.sender.isActive"
+        (click)="sendData()"
+        clickLog
+      >
+        Click
+      </button>
+    </div>
+
+    <ng-container *ngIf="config.receiver.isActive; else disabledInput">
+      <input
+        *ngIf="config.receiver.isAsyncPipe"
+        [value]="(data$ | async)?.message"
+        [attr.data-message]="(data$ | async)?.message"
+        readonly
+        type="text"
+      />
+      <input
+        *ngIf="!config.receiver.isAsyncPipe"
+        [value]="data?.message"
+        [attr.data-message]="data?.message"
+        readonly
+        type="text"
+      />
+    </ng-container>
+    <ng-template #disabledInput>
+      <input disabled readonly type="text" />
+    </ng-template>
+  </div>
+
+  <div class="flex flex-{{ config.layout }} gap-4">
+    <ng-container #container></ng-container>
+  </div>
+</div>

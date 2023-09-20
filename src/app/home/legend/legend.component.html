@@ -1,0 +1,18 @@
+<h2>Legend</h2>
+
+<h3>Card colors</h3>
+
+<p class="flex flex-col gap-1">
+  <mm-legend-item
+    *ngFor="let item of agendaItems"
+    [style]="item.style"
+    [text]="item.text"
+  ></mm-legend-item>
+</p>
+
+<h3>Logs</h3>
+
+<p>
+  Will be shown in Console panel, showing each step for easier tracking and
+  expose details of cycles.
+</p>

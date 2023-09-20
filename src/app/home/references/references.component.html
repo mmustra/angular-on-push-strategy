@@ -1,0 +1,16 @@
+<h2>References</h2>
+
+<p>
+  Some of these articles can provide more insights on all the Angular pieces
+  that are involved in change detection with OnPush strategy.
+</p>
+
+<ul class="reference-list">
+  <li *ngFor="let reference of references">
+    <mm-reference-link
+      [author]="reference.author"
+      [title]="reference.title"
+      [linkUrl]="reference.linkUrl"
+    ></mm-reference-link>
+  </li>
+</ul>
